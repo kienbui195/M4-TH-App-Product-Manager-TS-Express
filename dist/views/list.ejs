@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <title>Product</title>
+
+</head>
+
+
+
+<body>
+
+<h3>List products</h3>
+<a href="/product/create">Tao moi</a>
+<div class="grid">
+
+    <% for (let product of data) { %>
+
+        <article class="card product-item">
+
+            <header class="card__header">
+
+                <h1 class="product__title">
+
+                    <%= product.name %>
+
+                </h1>
+
+            </header>
+
+            <div class="card__image">
+
+                <img src="/<%= product.avatar %>" alt="<%= product.name %>">
+
+            </div>
+
+            <div class="card__content">
+
+                <h2 class="product__price">$
+
+                    <%= product.price %>
+
+                </h2>
+
+                <p class="product__description">
+
+                    <%= product.author %>
+
+                </p>
+
+            </div>
+
+            <div class="card__actions">
+
+                <a href="/products/<%= product._id %>" class="btn">Details</a>
+
+            </div>
+
+        </article>
+
+    <% } %>
+
+</div>
+
+</body>
+
+
+
+</html>

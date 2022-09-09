@@ -1,0 +1,5 @@
+npm i -D typescript tsc tsc-watch rimraf @types/express
+
+npm i express body-parser
+
+npm i typeorm reflect-metadata --save
